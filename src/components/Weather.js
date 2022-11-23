@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import DisplayWeather from "./DisplayWeather";
 import "./weather.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Link } from "react-router-dom";
+import { Link, BrowserRouter } from "react-router-dom";
 import details from "./Details.js";
 
 
@@ -126,7 +126,7 @@ getcity();
                   <option value="">--Select Country--</option>
                  {
                  country.map( (getcon, index)=>(
-                  <option key={index} value={getcon.id}>{getcon.name} </option>
+                  <option key={index} value={getcon.iso2}>{getcon.name} </option>
                  ))
                   }
                 </select>
@@ -159,11 +159,15 @@ getcity();
                 <button type="button" className="btn btn-primary mt-4">Submit</button>
               </div>
               <React.Fragment>
-                <ul class="list-group">
+                <ul className="list-group">
                   {
                     city.map( (gcity, index)=>(
-                      <li class="list-group-item list-group-item-primary">
+                      <li key={gcity.name} className="list-group-item list-group-item-primary">
+                        <BrowserRouter>
+
                         <Link to="/details">{gcity.name}</Link>
+                        </BrowserRouter>
+
                         {/* <a href="#">{gcity.name}</a> */}
                       </li>
                     ))
