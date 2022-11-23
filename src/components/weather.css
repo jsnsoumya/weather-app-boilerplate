@@ -1,0 +1,17 @@
+.weather{
+    background: url(https://images.pexels.com/photos/1048283/pexels-photo-1048283.jpeg?cs=srgb&dl=pexels-lisa-fotios-1048283.jpg);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  } 
+  .weather span.title {
+    margin-top: 5% !important;
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+    color: aliceblue;
+    font-size: xxx-large;
+}
+.searchForm{
+    display: flex;
+}

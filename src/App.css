@@ -1,0 +1,33 @@
+.weatherBg{
+  background: url(https://images.pexels.com/photos/1048283/pexels-photo-1048283.jpeg?cs=srgb&dl=pexels-lisa-fotios-1048283.jpg);
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}  
+.appTitle{
+  margin-top: 5% !important;
+  font-weight: 700;
+  font-family: 'Times New Roman', Times, serif;
+  color: aliceblue;
+  font-size: xxx-large;
+}
+.weatherResultBox{
+  margin: auto;
+  height: 500px;
+  width: 500px;
+
+}
+.weatherIcon{
+  width: 100px;
+  height: 100px;
+  margin-top: 10%;
+}
+.weatherCity{
+  font-size: 35px;
+}
+.weatherTemp{
+  font-size: 45px;
+  font-weight: 700;
+  
+}
