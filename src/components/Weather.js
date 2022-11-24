@@ -52,11 +52,11 @@ const [country, setCountry]= useState([]);
 
    useEffect( ()=>{
    const getstate= async()=>{
-       const resstate= await fetch(`https://api.countrystatecity.in/v1/countries/IN/states`, requestOptions);
+       const resstate= await fetch(`https://api.countrystatecity.in/v1/countries/${countryid}/states`, requestOptions);
        console.log("resstate", resstate);
        const resst= await resstate.json();
        console.log("resst", resst);
-       setSt(await resst);
+       setSt(resst);
    }
   getstate();
    },[countryid]);
@@ -138,7 +138,7 @@ getcity();
                   <option value="">--Select State--</option>
                   {
                     st.map((getst, index)=>(
-                     <option key={index} value={getst.id}>{getst.name} </option>
+                     <option key={index} value={getst.iso2}>{getst.name} </option>
                     )) 
                   }                  
                 </select>
