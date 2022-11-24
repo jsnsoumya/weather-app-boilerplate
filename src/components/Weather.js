@@ -67,7 +67,7 @@ const [country, setCountry]= useState([]);
   }
 useEffect( ()=>{
   const getcity= async()=>{   
-      const rescity= await fetch(`https://api.countrystatecity.in/v1/countries/IN/states/MH/cities`, requestOptions);
+      const rescity= await fetch(`https://api.countrystatecity.in/v1/countries/${countryid}/states/${stateid}/cities`, requestOptions);
       console.log("rescity", rescity);
       const rcity= await rescity.json();
       console.log("rcity", rcity);
